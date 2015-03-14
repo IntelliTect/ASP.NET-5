@@ -14,6 +14,12 @@ namespace WebApplicationSample
 
         public void Configure(IApplicationBuilder app)
         {
+           app.Run((context) =>
+           {
+               context.Response.StatusCode = 200;
+               context.Response.ContentType = "text/plain";
+               return context.Response.WriteAsync("Hello World");
+           });
         }
     }
 }
