@@ -14,7 +14,7 @@ namespace WebApplicationSample
 
         public void Configure(IApplicationBuilder app)
         {
-            app.UseWelcomePage();
+            app.UseWelcomePage("/.");
         }
     }
 }
