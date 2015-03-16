@@ -2,6 +2,7 @@
 using Microsoft.AspNet.Builder;
 using Microsoft.AspNet.Http;
 using Microsoft.Framework.DependencyInjection;
+using WebApplicationSample.Models;
 
 namespace WebApplicationSample
 {
@@ -11,6 +12,8 @@ namespace WebApplicationSample
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            // services.AddScoped<IDateTimeContext>();
+            services.AddScoped<IDateTimeContext, DateTimeContext>();
         }
 
         public void Configure(IApplicationBuilder app)
